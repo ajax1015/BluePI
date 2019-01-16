@@ -1,0 +1,10 @@
+E:\Project\BluePI\BluePI.Entity\bin\Debug\netstandard2.0\BluePI.Entity.deps.json
+E:\Project\BluePI\BluePI.Entity\bin\Debug\netstandard2.0\BluePI.Entity.dll
+E:\Project\BluePI\BluePI.Entity\bin\Debug\netstandard2.0\BluePI.Entity.pdb
+E:\Project\BluePI\BluePI.Entity\bin\Debug\netstandard2.0\EntityHelp.xml
+E:\Project\BluePI\BluePI.Entity\obj\Debug\netstandard2.0\BluePI.Entity.csprojAssemblyReference.cache
+E:\Project\BluePI\BluePI.Entity\obj\Debug\netstandard2.0\BluePI.Entity.csproj.CoreCompileInputs.cache
+E:\Project\BluePI\BluePI.Entity\obj\Debug\netstandard2.0\BluePI.Entity.AssemblyInfoInputs.cache
+E:\Project\BluePI\BluePI.Entity\obj\Debug\netstandard2.0\BluePI.Entity.AssemblyInfo.cs
+E:\Project\BluePI\BluePI.Entity\obj\Debug\netstandard2.0\BluePI.Entity.dll
+E:\Project\BluePI\BluePI.Entity\obj\Debug\netstandard2.0\BluePI.Entity.pdb

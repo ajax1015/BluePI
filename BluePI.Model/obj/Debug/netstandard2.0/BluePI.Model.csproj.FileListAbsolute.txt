@@ -1,0 +1,12 @@
+E:\Project\BluePI\BluePI.Model\bin\Debug\netstandard2.0\BluePI.Model.deps.json
+E:\Project\BluePI\BluePI.Model\bin\Debug\netstandard2.0\BluePI.Model.dll
+E:\Project\BluePI\BluePI.Model\bin\Debug\netstandard2.0\BluePI.Model.pdb
+E:\Project\BluePI\BluePI.Model\bin\Debug\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\Project\BluePI\BluePI.Model\bin\Debug\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.xml
+E:\Project\BluePI\BluePI.Model\obj\Debug\netstandard2.0\BluePI.Model.csproj.CoreCompileInputs.cache
+E:\Project\BluePI\BluePI.Model\obj\Debug\netstandard2.0\BluePI.Model.AssemblyInfoInputs.cache
+E:\Project\BluePI\BluePI.Model\obj\Debug\netstandard2.0\BluePI.Model.AssemblyInfo.cs
+E:\Project\BluePI\BluePI.Model\obj\Debug\netstandard2.0\BluePI.Model.csproj.CopyComplete
+E:\Project\BluePI\BluePI.Model\obj\Debug\netstandard2.0\BluePI.Model.dll
+E:\Project\BluePI\BluePI.Model\obj\Debug\netstandard2.0\BluePI.Model.pdb
+E:\Project\BluePI\BluePI.Model\obj\Debug\netstandard2.0\BluePI.Model.csprojAssemblyReference.cache

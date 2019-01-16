@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2041
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BluePI", "BluePI\BluePI.csproj", "{79145E5A-5E28-4875-BB4F-C206D45C8463}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BluePI.Model", "BluePI.Model\BluePI.Model.csproj", "{E5F66B46-9062-4998-980C-9ACCD0363868}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BluePI.Helper", "BluePI.Helper\BluePI.Helper.csproj", "{C16A808A-0DCF-47CE-8661-D7C9B2ADD504}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqlSugar", "SqlSugar\SqlSugar.csproj", "{7CE124F4-0F9C-4874-B837-45EC6FEB2E33}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BluePI.Repository", "BluePI.Repository\BluePI.Repository.csproj", "{362FFA23-C922-4E62-A8F7-9A1D05BCE1E7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BluePI.Service", "BluePI.Service\BluePI.Service.csproj", "{115D3877-18C1-456C-B617-815B2DDB7BF0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BluePI.Entity", "BluePI.Entity\BluePI.Entity.csproj", "{88061178-465C-4477-87BD-166A6255388E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{79145E5A-5E28-4875-BB4F-C206D45C8463}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79145E5A-5E28-4875-BB4F-C206D45C8463}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79145E5A-5E28-4875-BB4F-C206D45C8463}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79145E5A-5E28-4875-BB4F-C206D45C8463}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5F66B46-9062-4998-980C-9ACCD0363868}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5F66B46-9062-4998-980C-9ACCD0363868}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5F66B46-9062-4998-980C-9ACCD0363868}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5F66B46-9062-4998-980C-9ACCD0363868}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C16A808A-0DCF-47CE-8661-D7C9B2ADD504}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C16A808A-0DCF-47CE-8661-D7C9B2ADD504}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C16A808A-0DCF-47CE-8661-D7C9B2ADD504}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C16A808A-0DCF-47CE-8661-D7C9B2ADD504}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CE124F4-0F9C-4874-B837-45EC6FEB2E33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CE124F4-0F9C-4874-B837-45EC6FEB2E33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CE124F4-0F9C-4874-B837-45EC6FEB2E33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CE124F4-0F9C-4874-B837-45EC6FEB2E33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{362FFA23-C922-4E62-A8F7-9A1D05BCE1E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{362FFA23-C922-4E62-A8F7-9A1D05BCE1E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{362FFA23-C922-4E62-A8F7-9A1D05BCE1E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{362FFA23-C922-4E62-A8F7-9A1D05BCE1E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{115D3877-18C1-456C-B617-815B2DDB7BF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{115D3877-18C1-456C-B617-815B2DDB7BF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{115D3877-18C1-456C-B617-815B2DDB7BF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{115D3877-18C1-456C-B617-815B2DDB7BF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88061178-465C-4477-87BD-166A6255388E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88061178-465C-4477-87BD-166A6255388E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88061178-465C-4477-87BD-166A6255388E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88061178-465C-4477-87BD-166A6255388E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A540AACA-88E6-4842-9C5F-60B1C8A46E55}
+	EndGlobalSection
+EndGlobal
