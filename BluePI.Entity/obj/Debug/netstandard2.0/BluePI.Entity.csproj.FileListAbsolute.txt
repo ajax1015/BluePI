@@ -8,3 +8,6 @@ E:\Project\BluePI\BluePI.Entity\obj\Debug\netstandard2.0\BluePI.Entity.AssemblyI
 E:\Project\BluePI\BluePI.Entity\obj\Debug\netstandard2.0\BluePI.Entity.AssemblyInfo.cs
 E:\Project\BluePI\BluePI.Entity\obj\Debug\netstandard2.0\BluePI.Entity.dll
 E:\Project\BluePI\BluePI.Entity\obj\Debug\netstandard2.0\BluePI.Entity.pdb
+E:\Project\BluePI\BluePI.Entity\bin\Debug\netstandard2.0\SqlSugar.dll
+E:\Project\BluePI\BluePI.Entity\bin\Debug\netstandard2.0\SqlSugar.pdb
+E:\Project\BluePI\BluePI.Entity\obj\Debug\netstandard2.0\BluePI.Entity.csproj.CopyComplete

@@ -1,9 +1,9 @@
 E:\Project\BluePI\SqlSugar\bin\Debug\netstandard2.0\SqlSugar.deps.json
 E:\Project\BluePI\SqlSugar\bin\Debug\netstandard2.0\SqlSugar.dll
 E:\Project\BluePI\SqlSugar\bin\Debug\netstandard2.0\SqlSugar.pdb
-E:\Project\BluePI\SqlSugar\obj\Debug\netstandard2.0\SqlSugar.csprojAssemblyReference.cache
 E:\Project\BluePI\SqlSugar\obj\Debug\netstandard2.0\SqlSugar.csproj.CoreCompileInputs.cache
 E:\Project\BluePI\SqlSugar\obj\Debug\netstandard2.0\SqlSugar.AssemblyInfoInputs.cache
 E:\Project\BluePI\SqlSugar\obj\Debug\netstandard2.0\SqlSugar.AssemblyInfo.cs
 E:\Project\BluePI\SqlSugar\obj\Debug\netstandard2.0\SqlSugar.dll
 E:\Project\BluePI\SqlSugar\obj\Debug\netstandard2.0\SqlSugar.pdb
+E:\Project\BluePI\SqlSugar\obj\Debug\netstandard2.0\SqlSugar.csprojAssemblyReference.cache

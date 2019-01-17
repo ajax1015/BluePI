@@ -1,6 +1,6 @@
  using BluePI.Helper;
+using BluePI.IService;
 using BluePI.Model.ConfigModel;
-using BluePI.Service.IService;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 

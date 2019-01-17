@@ -5050,6 +5050,19 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
+      "BluePI.Entity/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "SqlSugar": "4.9.7.4"
+        },
+        "compile": {
+          "bin/placeholder/BluePI.Entity.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BluePI.Entity.dll": {}
+        }
+      },
       "BluePI.Helper/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -5062,6 +5075,34 @@
         },
         "runtime": {
           "bin/placeholder/BluePI.Helper.dll": {}
+        }
+      },
+      "BluePI.IRepository/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "BluePI.Entity": "1.0.0",
+          "BluePI.Helper": "1.0.0",
+          "BluePI.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BluePI.IRepository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BluePI.IRepository.dll": {}
+        }
+      },
+      "BluePI.IService/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "BluePI.Entity": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BluePI.IService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BluePI.IService.dll": {}
         }
       },
       "BluePI.Model/1.0.0": {
@@ -5078,7 +5119,9 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "BluePI.Entity": "1.0.0",
           "BluePI.Helper": "1.0.0",
+          "BluePI.IRepository": "1.0.0",
           "BluePI.Model": "1.0.0",
           "SqlSugar": "4.9.7.4"
         },
@@ -5093,7 +5136,9 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "BluePI.Repository": "1.0.0"
+          "BluePI.Entity": "1.0.0",
+          "BluePI.IRepository": "1.0.0",
+          "BluePI.IService": "1.0.0"
         },
         "compile": {
           "bin/placeholder/BluePI.Service.dll": {}
@@ -13548,10 +13593,25 @@
         "system.xml.xpath.xdocument.nuspec"
       ]
     },
+    "BluePI.Entity/1.0.0": {
+      "type": "project",
+      "path": "../BluePI.Entity/BluePI.Entity.csproj",
+      "msbuildProject": "../BluePI.Entity/BluePI.Entity.csproj"
+    },
     "BluePI.Helper/1.0.0": {
       "type": "project",
       "path": "../BluePI.Helper/BluePI.Helper.csproj",
       "msbuildProject": "../BluePI.Helper/BluePI.Helper.csproj"
+    },
+    "BluePI.IRepository/1.0.0": {
+      "type": "project",
+      "path": "../BluePI.Repository/BluePI.IRepository/BluePI.IRepository.csproj",
+      "msbuildProject": "../BluePI.Repository/BluePI.IRepository/BluePI.IRepository.csproj"
+    },
+    "BluePI.IService/1.0.0": {
+      "type": "project",
+      "path": "../BluePI.Service/BluePI.IService/BluePI.IService.csproj",
+      "msbuildProject": "../BluePI.Service/BluePI.IService/BluePI.IService.csproj"
     },
     "BluePI.Model/1.0.0": {
       "type": "project",
@@ -13560,13 +13620,13 @@
     },
     "BluePI.Repository/1.0.0": {
       "type": "project",
-      "path": "../BluePI.Repository/BluePI.Repository.csproj",
-      "msbuildProject": "../BluePI.Repository/BluePI.Repository.csproj"
+      "path": "../BluePI.Repository/BluePI.Repository/BluePI.Repository.csproj",
+      "msbuildProject": "../BluePI.Repository/BluePI.Repository/BluePI.Repository.csproj"
     },
     "BluePI.Service/1.0.0": {
       "type": "project",
-      "path": "../BluePI.Service/BluePI.Service.csproj",
-      "msbuildProject": "../BluePI.Service/BluePI.Service.csproj"
+      "path": "../BluePI.Service/BluePI.Service/BluePI.Service.csproj",
+      "msbuildProject": "../BluePI.Service/BluePI.Service/BluePI.Service.csproj"
     },
     "SqlSugar/4.9.7.4": {
       "type": "project",
@@ -13578,8 +13638,10 @@
     ".NETCoreApp,Version=v2.1": [
       "Autofac.Configuration",
       "Autofac.Extensions.DependencyInjection",
+      "BluePI.Entity >= 1.0.0",
       "BluePI.Helper >= 1.0.0",
       "BluePI.Model >= 1.0.0",
+      "BluePI.Repository >= 1.0.0",
       "BluePI.Service >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.Extensions.PlatformAbstractions >= 1.1.0",
@@ -13617,14 +13679,20 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
+            "E:\\Project\\BluePI\\BluePI.Entity\\BluePI.Entity.csproj": {
+              "projectPath": "E:\\Project\\BluePI\\BluePI.Entity\\BluePI.Entity.csproj"
+            },
             "E:\\Project\\BluePI\\BluePI.Helper\\BluePI.Helper.csproj": {
               "projectPath": "E:\\Project\\BluePI\\BluePI.Helper\\BluePI.Helper.csproj"
             },
             "E:\\Project\\BluePI\\BluePI.Model\\BluePI.Model.csproj": {
               "projectPath": "E:\\Project\\BluePI\\BluePI.Model\\BluePI.Model.csproj"
             },
-            "E:\\Project\\BluePI\\BluePI.Service\\BluePI.Service.csproj": {
-              "projectPath": "E:\\Project\\BluePI\\BluePI.Service\\BluePI.Service.csproj"
+            "E:\\Project\\BluePI\\BluePI.Repository\\BluePI.Repository\\BluePI.Repository.csproj": {
+              "projectPath": "E:\\Project\\BluePI\\BluePI.Repository\\BluePI.Repository\\BluePI.Repository.csproj"
+            },
+            "E:\\Project\\BluePI\\BluePI.Service\\BluePI.Service\\BluePI.Service.csproj": {
+              "projectPath": "E:\\Project\\BluePI\\BluePI.Service\\BluePI.Service\\BluePI.Service.csproj"
             }
           }
         }

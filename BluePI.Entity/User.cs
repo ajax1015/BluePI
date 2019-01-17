@@ -11,6 +11,9 @@ namespace BluePI.Entity
     [SugarTable("user")]
     public partial class User
     {
+        /// <summary>
+        /// 
+        /// </summary>
            public User(){
 
 

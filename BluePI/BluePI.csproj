@@ -23,7 +23,9 @@
   <ItemGroup>
     <ProjectReference Include="..\BluePI.Helper\BluePI.Helper.csproj" />
     <ProjectReference Include="..\BluePI.Model\BluePI.Model.csproj" />
-    <ProjectReference Include="..\BluePI.Service\BluePI.Service.csproj"/>
+    <ProjectReference Include="..\BluePI.Service\BluePI.Service\BluePI.Service.csproj"/>
+    <ProjectReference Include="..\BluePI.Repository\BluePI.Repository\BluePI.Repository.csproj"/>
+    <ProjectReference Include="..\BluePI.Entity\BluePI.Entity.csproj"/>
   </ItemGroup>
 
 </Project>

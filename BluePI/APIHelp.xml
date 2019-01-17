@@ -27,6 +27,17 @@
             Admin
             </summary>
         </member>
+        <member name="M:BluePI.Controllers.AdminController.#ctor(BluePI.Service.IService.IUserService)">
+            <summary>
+            ctor
+            </summary>
+        </member>
+        <member name="M:BluePI.Controllers.AdminController.Register(BluePI.Entity.User)">
+            <summary>
+            用户注册
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:BluePI.Controllers.ClientController">
             <summary>
             Client

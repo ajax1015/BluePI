@@ -4,5 +4,296 @@
         <name>BluePI.Entity</name>
     </assembly>
     <members>
+        <member name="T:BluePI.Entity.CommEntity.OperateStatus">
+             <summary>
+            操作状态返回类
+             </summary>
+        </member>
+        <member name="P:BluePI.Entity.CommEntity.OperateStatus.IsSuccessful">
+            <summary>
+             获取一个值，表示返回标记是否成功
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:BluePI.Entity.CommEntity.OperateStatus.IsNotSuccessful">
+            <summary>
+            获取一个值，表示返回标记是否不成功
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:BluePI.Entity.CommEntity.OperateStatus.ResultSign">
+            <summary>
+            返回标记
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:BluePI.Entity.CommEntity.OperateStatus.MessageKey">
+            <summary>
+            消息字符串key
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:BluePI.Entity.CommEntity.OperateStatus.FormatParams">
+            <summary>
+             消息的参数
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:BluePI.Entity.CommEntity.OperateStatus.#ctor">
+            <summary>
+             构造函数
+            </summary>
+        </member>
+        <member name="M:BluePI.Entity.CommEntity.OperateStatus.#ctor(BluePI.Entity.CommEntity.OperateStatus)">
+            <summary>
+            从操作状态构造
+            </summary>
+            <param name="status">  </param>
+        </member>
+        <member name="M:BluePI.Entity.CommEntity.OperateStatus.CopyFromStatus(BluePI.Entity.CommEntity.OperateStatus)">
+            <summary>
+             从操作状态复制
+            </summary>
+            <param name="status"></param>
+        </member>
+        <member name="T:BluePI.Entity.CommEntity.ResultSign">
+            <summary>
+            操作状态枚举
+            </summary>
+        </member>
+        <member name="F:BluePI.Entity.CommEntity.ResultSign.Successful">
+            <summary>
+            成功
+            </summary>
+        </member>
+        <member name="F:BluePI.Entity.CommEntity.ResultSign.Warning">
+            <summary>
+            警告
+            </summary>
+        </member>
+        <member name="F:BluePI.Entity.CommEntity.ResultSign.Error">
+            <summary>
+            失败
+            </summary>
+        </member>
+        <member name="T:BluePI.Entity.CommEntity.PagedResults`1">
+            <summary>
+            分页结果
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:BluePI.Entity.CommEntity.PagedResults`1.PagerInfo">
+            <summary>
+            分页信息
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:BluePI.Entity.CommEntity.PagedResults`1.Data">
+            <summary>
+            分页数据
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:BluePI.Entity.CommEntity.PagedResults`1.#ctor">
+            <summary>
+            ctor
+            </summary>
+        </member>
+        <member name="M:BluePI.Entity.CommEntity.PagedResults`1.#ctor(BluePI.Entity.CommEntity.QueryParam)">
+            <summary>
+            
+            </summary>
+            <param name="param"></param>
+        </member>
+        <member name="M:BluePI.Entity.CommEntity.PagedResults`1.ConvertTo``1(System.Func{`0,``0})">
+            <summary>
+            
+            </summary>
+            <param name="converter"></param>
+            <typeparam name="TResult"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:BluePI.Entity.CommEntity.PagedResults`1.ConvertFrom(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="pagedResults"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BluePI.Entity.CommEntity.PagerInfo">
+            <summary>
+            分页信息
+            </summary>
+        </member>
+        <member name="P:BluePI.Entity.CommEntity.PagerInfo.TotalRowCount">
+            <summary>
+            记录总条数
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:BluePI.Entity.CommEntity.PagerInfo.PageSize">
+            <summary>
+            页数
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:BluePI.Entity.CommEntity.PagerInfo.StartIndex">
+            <summary>
+            开始索引
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:BluePI.Entity.CommEntity.PagerInfo.PageIndex">
+            <summary>
+            页码
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:BluePI.Entity.CommEntity.PagerInfo.TotalPageCount">
+            <summary>
+            总页数
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:BluePI.Entity.CommEntity.PagerInfo.#ctor(BluePI.Entity.CommEntity.QueryParam)">
+            <summary>
+            查询参数赋值
+            </summary>
+            <param name="queryParam"></param>
+        </member>
+        <member name="M:BluePI.Entity.CommEntity.PagerInfo.ComputePageIndex(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="total"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BluePI.Entity.CommEntity.QueryParam">
+            <summary>
+            查询基类
+            </summary>
+        </member>
+        <member name="P:BluePI.Entity.CommEntity.QueryParam.StartIndex">
+            <summary>
+            
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:BluePI.Entity.CommEntity.QueryParam.Page">
+            <summary>
+            
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:BluePI.Entity.CommEntity.QueryParam.Rows">
+            <summary>
+            
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:BluePI.Entity.CommEntity.QueryParam.Sord">
+            <summary>
+            
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:BluePI.Entity.CommEntity.QueryParam.Sidx">
+            <summary>
+            
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:BluePI.Entity.CommEntity.QueryParam.OrderString">
+            <summary>
+            
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:BluePI.Entity.CommEntity.QueryParam.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:BluePI.Entity.User">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BluePI.Entity.User.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BluePI.Entity.User.Contact">
+            <summary>
+            Desc:联系方式（手机，QQ,微信等）
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:BluePI.Entity.User.Email">
+            <summary>
+            Desc:邮箱
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:BluePI.Entity.User.HeadPic">
+            <summary>
+            Desc:头像
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:BluePI.Entity.User.LogoName">
+            <summary>
+            Desc:登陆名称
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:BluePI.Entity.User.Name">
+            <summary>
+            Desc:真实姓名
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:BluePI.Entity.User.NickName">
+            <summary>
+            Desc:昵称
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:BluePI.Entity.User.Address">
+            <summary>
+            Desc:住址
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:BluePI.Entity.User.Password">
+            <summary>
+            Desc:登陆密码
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:BluePI.Entity.User.Age">
+            <summary>
+            Desc:年龄
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:BluePI.Entity.User.Sex">
+            <summary>
+            Desc:性别
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
     </members>
 </doc>

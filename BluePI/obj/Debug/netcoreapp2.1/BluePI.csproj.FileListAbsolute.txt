@@ -24,3 +24,5 @@ E:\Project\BluePI\BluePI\bin\Debug\netcoreapp2.1\BluePI.Repository.dll
 E:\Project\BluePI\BluePI\bin\Debug\netcoreapp2.1\BluePI.Service.dll
 E:\Project\BluePI\BluePI\bin\Debug\netcoreapp2.1\BluePI.Service.pdb
 E:\Project\BluePI\BluePI\bin\Debug\netcoreapp2.1\BluePI.Repository.pdb
+E:\Project\BluePI\BluePI\bin\Debug\netcoreapp2.1\BluePI.Entity.dll
+E:\Project\BluePI\BluePI\bin\Debug\netcoreapp2.1\BluePI.Entity.pdb

@@ -20,9 +20,8 @@ using BluePI.Model;
 using System.Reflection;
 using BluePI.Unit;
 using System.Linq;
-using BluePI.Service.IService;
 using BluePI.Repository;
-using BluePI.Service.Service;
+using BluePI.Service;
 
 namespace BluePI
 {
