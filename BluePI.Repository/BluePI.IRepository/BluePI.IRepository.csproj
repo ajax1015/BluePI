@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+<ItemGroup>
+     <ProjectReference Include="..\..\BluePI.Helper\BluePI.Helper.csproj" />
+    <ProjectReference Include="..\..\BluePI.Model\BluePI.Model.csproj" />
+    <ProjectReference Include="..\..\BluePI.Entity\BluePI.Entity.csproj"/> 
+</ItemGroup>
+
+</Project>

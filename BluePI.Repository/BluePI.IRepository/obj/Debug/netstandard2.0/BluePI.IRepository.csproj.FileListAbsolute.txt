@@ -1,0 +1,4 @@
+E:\Project\BluePI\BluePI.Repository\BluePI.IRepository\obj\Debug\netstandard2.0\BluePI.IRepository.csprojAssemblyReference.cache
+E:\Project\BluePI\BluePI.Repository\BluePI.IRepository\obj\Debug\netstandard2.0\BluePI.IRepository.csproj.CoreCompileInputs.cache
+E:\Project\BluePI\BluePI.Repository\BluePI.IRepository\obj\Debug\netstandard2.0\BluePI.IRepository.AssemblyInfoInputs.cache
+E:\Project\BluePI\BluePI.Repository\BluePI.IRepository\obj\Debug\netstandard2.0\BluePI.IRepository.AssemblyInfo.cs

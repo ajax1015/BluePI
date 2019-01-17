@@ -27,7 +27,11 @@
             Admin
             </summary>
         </member>
+<<<<<<< Updated upstream
+        <member name="M:BluePI.Controllers.AdminController.#ctor(BluePI.IService.IUserService)">
+=======
         <member name="M:BluePI.Controllers.AdminController.#ctor(BluePI.Service.IService.IUserService)">
+>>>>>>> Stashed changes
             <summary>
             ctor
             </summary>
@@ -53,7 +57,7 @@
             
             </summary>
         </member>
-        <member name="M:BluePI.Controllers.SystemController.#ctor(BluePI.Service.IService.ISystemService)">
+        <member name="M:BluePI.Controllers.SystemController.#ctor(BluePI.IService.ISystemService)">
             <summary>
             ctor
             </summary>
