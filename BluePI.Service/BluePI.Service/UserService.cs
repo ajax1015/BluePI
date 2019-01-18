@@ -1,4 +1,4 @@
-using BluePI.Entity; 
+using BluePI.Entity;
 using BluePI.IService;
 using BluePI.IRepository;
 using BluePI.Entity.CommEntity;
@@ -22,6 +22,15 @@ namespace BluePI.Service
 
             userRepository = _userRepository;
         }
+        /// <summary>
+        /// 用户登录
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        public OperateStatus LogOn(User user)
+        {
+             return userRepository.LogOn(user);
+        }
 
         /// <summary>
         /// 用户注册
@@ -30,7 +39,7 @@ namespace BluePI.Service
         /// <returns></returns>
         public OperateStatus Register(User user)
         {
-            return  userRepository.Register(user);
+            return userRepository.Register(user);
         }
     }
 }

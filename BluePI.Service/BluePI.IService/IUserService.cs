@@ -12,6 +12,12 @@ namespace BluePI.IService
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-         OperateStatus Register(User user);
+        OperateStatus Register(User user);
+        /// <summary>
+        /// 用户登录
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        OperateStatus LogOn(User user);
     }
 }

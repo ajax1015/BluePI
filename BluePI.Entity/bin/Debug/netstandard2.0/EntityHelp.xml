@@ -225,6 +225,13 @@
             
             </summary>
         </member>
+        <member name="P:BluePI.Entity.User.Id">
+            <summary>
+            Desc:Id
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
         <member name="P:BluePI.Entity.User.Contact">
             <summary>
             Desc:联系方式（手机，QQ,微信等）
