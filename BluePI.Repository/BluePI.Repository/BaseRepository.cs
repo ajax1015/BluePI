@@ -13,13 +13,13 @@ namespace BluePI.Repository
     /// 服务层基类
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public abstract class BaseRepository<T> where T:class,new()
+    public abstract class BaseRepository<T> where T : class, new()
     {
         public BaseRepository()
         {
-                                 
-         
-            db =SqlSugarHelper.GetClient();
+
+
+            db = SqlSugarHelper.GetClient();
             sdb = db.GetSimpleClient();
         }
         public SqlSugarClient db;
@@ -40,26 +40,48 @@ namespace BluePI.Repository
             };
             return t;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public T Get(long id)
         {
             return sdb.GetById<T>(id);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
         public bool Add(T entity)
         {
             return sdb.Insert(entity);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
         public bool Update(T entity)
         {
             return sdb.Update(entity);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="ids"></param>
+        /// <returns></returns>
         public bool Dels(dynamic[] ids)
         {
             return sdb.DeleteByIds<T>(ids);
         }
-        #endregion
-    }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="ids"></param>
+        /// <typeparam name="T"></typeparam>
+
+    #endregion
+}
 }

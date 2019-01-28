@@ -8,7 +8,7 @@ namespace BluePI.Service
     /// <summary>
     /// 用户管理服务
     /// </summary>
-    public class UserService : IUserService
+    public class UserService : BaseService<User>, IUserService
     {
         /// <summary>
         /// 
@@ -18,6 +18,7 @@ namespace BluePI.Service
         /// ctor
         /// </summary>
         public UserService(IUserRepository _userRepository)
+         : base(_userRepository)
         {
 
             userRepository = _userRepository;
@@ -29,7 +30,7 @@ namespace BluePI.Service
         /// <returns></returns>
         public OperateStatus LogOn(User user)
         {
-             return userRepository.LogOn(user);
+            return userRepository.LogOn(user);
         }
 
         /// <summary>
@@ -40,6 +41,16 @@ namespace BluePI.Service
         public OperateStatus Register(User user)
         {
             return userRepository.Register(user);
+        }
+        /// <summary>
+        /// 获取用户信息
+        /// </summary>
+        /// <param name="queryParam"></param>       
+        /// <returns></returns>
+        public User GetUser(UserQueryParam queryParam)
+        {
+            return userRepository.GetUser(queryParam);
+
         }
     }
 }

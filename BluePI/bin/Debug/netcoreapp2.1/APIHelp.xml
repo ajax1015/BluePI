@@ -32,9 +32,22 @@
             ctor
             </summary>
         </member>
-        <member name="M:BluePI.Controllers.AdminController.Register(BluePI.Entity.User)">
+        <member name="M:BluePI.Controllers.AdminController.Register(BluePI.Model.UserModel)">
             <summary>
             用户注册
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BluePI.Controllers.AdminController.LogOn(BluePI.Entity.UserQueryParam)">
+            <summary>
+            用户登录
+            </summary>
+            <param name="queryParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BluePI.Controllers.AdminController.GetUser">
+            <summary>
+            获取用户信息test
             </summary>
             <returns></returns>
         </member>

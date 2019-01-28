@@ -21,7 +21,7 @@ namespace BluePI
         /// <param name="args"></param>
         public static void Main(string[] args)
         {
-            CreateWebHostBuilder(args).Build().Run();
+              CreateWebHostBuilder(args).Build().Run();
         }
 
         /// <summary>

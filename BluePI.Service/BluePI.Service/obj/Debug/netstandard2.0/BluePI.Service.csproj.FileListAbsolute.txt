@@ -24,3 +24,5 @@ E:\Project\BluePI\BluePI.Service\BluePI.Service\bin\Debug\netstandard2.0\System.
 E:\Project\BluePI\BluePI.Service\BluePI.Service\obj\Debug\netstandard2.0\BluePI.Service.csproj.CopyComplete
 E:\Project\BluePI\BluePI.Service\BluePI.Service\obj\Debug\netstandard2.0\BluePI.Service.dll
 E:\Project\BluePI\BluePI.Service\BluePI.Service\obj\Debug\netstandard2.0\BluePI.Service.pdb
+E:\Project\BluePI\BluePI.Service\BluePI.Service\bin\Debug\netstandard2.0\BluePI.Repository.dll
+E:\Project\BluePI\BluePI.Service\BluePI.Service\bin\Debug\netstandard2.0\BluePI.Repository.pdb

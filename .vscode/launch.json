@@ -12,6 +12,7 @@
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
             "program": "${workspaceFolder}/BluePI/bin/Debug/netcoreapp2.1/BluePI.dll",
+           //"program": "${workspaceFolder}/BluePI/Views/Index.html",
             "args": [],
             "cwd": "${workspaceFolder}/BluePI",
             "stopAtEntry": false,

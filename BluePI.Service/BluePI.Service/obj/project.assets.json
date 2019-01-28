@@ -2098,6 +2098,23 @@
           "bin/placeholder/BluePI.Model.dll": {}
         }
       },
+      "BluePI.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "BluePI.Entity": "1.0.0",
+          "BluePI.Helper": "1.0.0",
+          "BluePI.IRepository": "1.0.0",
+          "BluePI.Model": "1.0.0",
+          "SqlSugar": "4.9.7.4"
+        },
+        "compile": {
+          "bin/placeholder/BluePI.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BluePI.Repository.dll": {}
+        }
+      },
       "SqlSugar/4.9.7.4": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -6974,6 +6991,11 @@
       "path": "../../BluePI.Model/BluePI.Model.csproj",
       "msbuildProject": "../../BluePI.Model/BluePI.Model.csproj"
     },
+    "BluePI.Repository/1.0.0": {
+      "type": "project",
+      "path": "../../BluePI.Repository/BluePI.Repository/BluePI.Repository.csproj",
+      "msbuildProject": "../../BluePI.Repository/BluePI.Repository/BluePI.Repository.csproj"
+    },
     "SqlSugar/4.9.7.4": {
       "type": "project",
       "path": "../../SqlSugar/SqlSugar.csproj",
@@ -6985,6 +7007,7 @@
       "BluePI.Entity >= 1.0.0",
       "BluePI.IRepository >= 1.0.0",
       "BluePI.IService >= 1.0.0",
+      "BluePI.Repository >= 1.0.0",
       "NETStandard.Library >= 2.0.3"
     ]
   },
@@ -7023,6 +7046,9 @@
             },
             "E:\\Project\\BluePI\\BluePI.Repository\\BluePI.IRepository\\BluePI.IRepository.csproj": {
               "projectPath": "E:\\Project\\BluePI\\BluePI.Repository\\BluePI.IRepository\\BluePI.IRepository.csproj"
+            },
+            "E:\\Project\\BluePI\\BluePI.Repository\\BluePI.Repository\\BluePI.Repository.csproj": {
+              "projectPath": "E:\\Project\\BluePI\\BluePI.Repository\\BluePI.Repository\\BluePI.Repository.csproj"
             },
             "E:\\Project\\BluePI\\BluePI.Service\\BluePI.IService\\BluePI.IService.csproj": {
               "projectPath": "E:\\Project\\BluePI\\BluePI.Service\\BluePI.IService\\BluePI.IService.csproj"

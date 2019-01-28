@@ -27,21 +27,21 @@ namespace BluePI.IService
         /// </summary>
         /// <param name="id"></param>
         /// <param name="status"></param>
-        void Delete(Guid id, out OperateStatus status);
+        void Delete(int id, out OperateStatus status);
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="status"></param>
+        void DeleteByIds(dynamic[] ids, out OperateStatus status);
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        T GetById(Guid id);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="values"></param>
-        /// <returns></returns>
-        IList<T> GetByValues(IList<Guid> values);
-
+        T GetById(int id);
     }
 }

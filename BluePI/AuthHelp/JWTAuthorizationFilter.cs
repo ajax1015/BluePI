@@ -43,7 +43,7 @@ namespace BluePI.AuthHelp
 
             //授权
             var claimList = new List<Claim>();
-            var claim = new Claim(ClaimTypes.Role, tm.Role);
+            var claim = new Claim(ClaimTypes.Role.ToString(), tm.Id.ToString());
             claimList.Add(claim);
             var identity = new ClaimsIdentity(claimList);
             var principal = new ClaimsPrincipal(identity);

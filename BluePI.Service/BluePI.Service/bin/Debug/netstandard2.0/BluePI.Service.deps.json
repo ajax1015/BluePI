@@ -12,6 +12,7 @@
           "BluePI.Entity": "1.0.0",
           "BluePI.IRepository": "1.0.0",
           "BluePI.IService": "1.0.0",
+          "BluePI.Repository": "1.0.0",
           "NETStandard.Library": "2.0.3"
         },
         "runtime": {
@@ -1486,6 +1487,18 @@
           "BluePI.Model.dll": {}
         }
       },
+      "BluePI.Repository/1.0.0": {
+        "dependencies": {
+          "BluePI.Entity": "1.0.0",
+          "BluePI.Helper": "1.0.0",
+          "BluePI.IRepository": "1.0.0",
+          "BluePI.Model": "1.0.0",
+          "SqlSugar": "4.9.7.4"
+        },
+        "runtime": {
+          "BluePI.Repository.dll": {}
+        }
+      },
       "SqlSugar/4.9.7.4": {
         "dependencies": {
           "Microsoft.Data.Sqlite": "2.0.0",
@@ -2386,6 +2399,11 @@
       "sha512": ""
     },
     "BluePI.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BluePI.Repository/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

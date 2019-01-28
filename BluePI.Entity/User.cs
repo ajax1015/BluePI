@@ -94,6 +94,13 @@ namespace BluePI.Entity
         /// Nullable:True
         /// </summary>           
         public int? Sex { get; set; }
+        /// <summary>
+        /// Desc:角色Id
+        /// Default:
+        /// Nullable:True
+        /// </summary>
+        /// <value></value>
+        public int RoleId { get; set; }
 
     }
 }

@@ -4,6 +4,23 @@
         <name>BluePI.Entity</name>
     </assembly>
     <members>
+        <member name="T:BluePI.Entity.CommEntity.AllInOneQueryParam">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BluePI.Entity.CommEntity.AllInOneQueryParam.Value">
+            <summary>
+            
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:BluePI.Entity.CommEntity.AllInOneQueryParam.CopyFromAllInOne(BluePI.Entity.CommEntity.AllInOneQueryParam)">
+            <summary>
+            
+            </summary>
+            <param name="queryParam"></param>
+        </member>
         <member name="T:BluePI.Entity.CommEntity.OperateStatus">
              <summary>
             操作状态返回类
@@ -215,6 +232,23 @@
             
             </summary>
         </member>
+        <member name="T:BluePI.Entity.UserQueryParam">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BluePI.Entity.UserQueryParam.LogoName">
+            <summary>
+            登陆名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:BluePI.Entity.UserQueryParam.Password">
+            <summary>
+            密码
+            </summary>
+            <value></value>
+        </member>
         <member name="T:BluePI.Entity.User">
             <summary>
             
@@ -301,6 +335,14 @@
             Default:
             Nullable:True
             </summary>           
+        </member>
+        <member name="P:BluePI.Entity.User.RoleId">
+            <summary>
+            Desc:角色Id
+            Default:
+            Nullable:True
+            </summary>
+            <value></value>
         </member>
     </members>
 </doc>

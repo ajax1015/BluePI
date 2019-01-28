@@ -5138,7 +5138,8 @@
         "dependencies": {
           "BluePI.Entity": "1.0.0",
           "BluePI.IRepository": "1.0.0",
-          "BluePI.IService": "1.0.0"
+          "BluePI.IService": "1.0.0",
+          "BluePI.Repository": "1.0.0"
         },
         "compile": {
           "bin/placeholder/BluePI.Service.dll": {}

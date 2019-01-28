@@ -30,7 +30,7 @@ namespace BluePI
     /// </summary>
     public class Startup
     {
- 
+
 
         /// <summary>
         /// 启动构造函数
@@ -39,7 +39,7 @@ namespace BluePI
         ///<param name="env"></param>
         public Startup(IConfiguration configuration, IHostingEnvironment env)
         {
-            Configuration = configuration; 
+            Configuration = configuration;
             BaseConfigModel.SetBaseConfig(Configuration, env.ContentRootPath, env.WebRootPath);
         }
         /// <summary>
@@ -59,11 +59,7 @@ namespace BluePI
         /// <param name="services"></param>
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddMvc().AddJsonOptions(options =>
-            {
-                options.SerializerSettings.DateFormatString = "yyyy-MM-dd HH:mm:ss";//设置时间格式
-            });
+
             #region Swagger
             services.AddSwaggerGen(c =>
             {
@@ -110,8 +106,8 @@ namespace BluePI
                     JwtAuthConfigModel jwtConfig = new JwtAuthConfigModel();
                     o.TokenValidationParameters = new TokenValidationParameters
                     {
-                        ValidIssuer = "RayPI",
-                        ValidAudience = "wr",
+                        ValidIssuer = "BluePI",
+                        ValidAudience = "zsg",
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(jwtConfig.JWTSecretKey)),
 
                         /***********************************TokenValidationParameters的参数默认值***********************************/
@@ -135,9 +131,23 @@ namespace BluePI
             #region 授权
             services.AddAuthorization(options =>
             {
+
+                //基于角色组的策略
                 options.AddPolicy("RequireClient", policy => policy.RequireRole("Client").Build());
                 options.AddPolicy("RequireAdmin", policy => policy.RequireRole("Admin").Build());
-                options.AddPolicy("RequireAdminOrClient", policy => policy.RequireRole("Admin,Client").Build());
+                options.AddPolicy("RequireAdminOrClient", policy => policy.RequireRole("Admin,Client").Build()); 
+                     //基于用户名
+                     //options.AddPolicy("RequireClaim", policy => policy.RequireUserName("张三"));                                                  
+                     //基于ClaimType
+                     //options.AddPolicy("RequireClaim", policy => policy.RequireClaim(ClaimTypes.Country,"中国"));
+                     //自定义值
+                     // options.AddPolicy("RequireClaim", policy => policy.RequireClaim("date","2017-09-02"));
+                     //}).AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>{
+                     //options.LoginPath = new PathString("/login");
+                     //options.AccessDeniedPath = new PathString("/denied");
+                     //});
+
+                     
             });
             #endregion
 
@@ -163,7 +173,11 @@ namespace BluePI
                 });
             });
             #endregion
-
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc().AddJsonOptions(options =>
+            {
+                options.SerializerSettings.DateFormatString = "yyyy-MM-dd HH:mm:ss";//设置时间格式
+            });
             #region autofac依赖注入
             var builder = new ContainerBuilder();//实例化AutoFac容器  
             builder.Populate(services);
@@ -212,7 +226,7 @@ namespace BluePI
             //认证
             app.UseAuthentication();
 
-            //授权
+            //使用中间件授权，需要在ajax 请求Headers参数中加入token码
             app.UseMiddleware<JwtAuthorizationFilter>();
 
             app.UseMvc();

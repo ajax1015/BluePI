@@ -20,9 +20,9 @@ namespace BluePI.Helper
             var dateTime = DateTime.UtcNow;
             var claims = new Claim[]
             {
-                new Claim(JwtRegisteredClaimNames.Jti,tokenModel.Uid.ToString()),//用户Id
-                new Claim("Role", tokenModel.Role),//身份
-                new Claim("Project", tokenModel.Project),//身份
+                new Claim(JwtRegisteredClaimNames.Jti,DateTime.Now.ToFileTime().ToString()),
+                new Claim("Id", tokenModel.Id.ToString()),
+                new Claim("LogoName", tokenModel.LogoName),               
                 new Claim(JwtRegisteredClaimNames.Iat,dateTime.ToString(),ClaimValueTypes.Integer64)
             };
             //秘钥
@@ -47,7 +47,7 @@ namespace BluePI.Helper
                     break;
             }
             var jwt = new JwtSecurityToken(
-                issuer: "RayPI",
+                issuer: "BluePI",
                 claims: claims, //声明集合
                 expires: dateTime.AddHours(exp),
                 signingCredentials: creds);
@@ -67,12 +67,13 @@ namespace BluePI.Helper
         {
             var jwtHandler = new JwtSecurityTokenHandler();
             JwtSecurityToken jwtToken = jwtHandler.ReadJwtToken(jwtStr);
-            object role = new object();  
-            object project = new object();
+            object logoName = new object();
+            object id = new object();
             try
             {
-                jwtToken.Payload.TryGetValue("Role", out role);
-                jwtToken.Payload.TryGetValue("Project", out project);
+                jwtToken.Payload.TryGetValue("Id", out id);
+                jwtToken.Payload.TryGetValue("LogoName", out logoName);
+
             }
             catch (Exception e)
             {
@@ -81,9 +82,9 @@ namespace BluePI.Helper
             }
             var tm = new TokenModel
             {
-                Uid = long.Parse(jwtToken.Id),
-                Role = role.ToString(),
-                Project = project.ToString()
+                Id = (int)id,
+                LogoName = logoName.ToString(),
+
             };
             return tm;
         }
@@ -95,17 +96,14 @@ namespace BluePI.Helper
     public class TokenModel
     {
         /// <summary>
-        /// 用户Id
+        /// Id
         /// </summary>
-        public long Uid { get; set; }
+        /// <value></value>
+        public int Id { get; set; }
         /// <summary>
-        /// 身份
+        /// 登陆名称
         /// </summary>
-        public string Role { get; set; }
-        /// <summary>
-        /// 项目名称
-        /// </summary>
-        public string Project { get; set; }
+        public string LogoName { get; set; }
         /// <summary>
         /// 令牌类型
         /// </summary>

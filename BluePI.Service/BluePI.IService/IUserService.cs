@@ -5,7 +5,7 @@ using BluePI.Entity.CommEntity;
 
 namespace BluePI.IService
 {
-    public interface IUserService
+    public interface IUserService : IBaseService<User>
     {
         /// <summary>
         /// 用户注册
@@ -19,5 +19,12 @@ namespace BluePI.IService
         /// <param name="user"></param>
         /// <returns></returns>
         OperateStatus LogOn(User user);
+
+        /// <summary>
+        /// 获取用户信息
+        /// </summary>
+        /// <param name="user"></param>       
+        /// <returns></returns>
+        User GetUser(UserQueryParam queryParam);
     }
 }
