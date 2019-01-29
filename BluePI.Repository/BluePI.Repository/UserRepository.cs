@@ -65,11 +65,17 @@ namespace BluePI.Repository
         public User GetUser(UserQueryParam queryParam)
         {
             queryParam.Password = string.IsNullOrEmpty(queryParam.Password) ? string.Empty : PwdHelper.Get32MD5Two(queryParam.Password);
-            return db.Queryable<User>().Where(f =>
-            (string.IsNullOrEmpty(queryParam.Value) || f.LogoName == queryParam.Value || f.Contact == queryParam.Value || f.Email == queryParam.Value)
+            var result= db.Queryable<User>()
+            .WhereIF(!string.IsNullOrEmpty(queryParam.Value),f=>f.LogoName == queryParam.Value || f.Contact == queryParam.Value || f.Email == queryParam.Value)
+            .WhereIF(!string.IsNullOrEmpty(queryParam.LogoName),f=>f.LogoName == queryParam.LogoName )
+            .WhereIF(!string.IsNullOrEmpty(queryParam.Password),f=>f.Password == queryParam.Password )
+            .First();
+            return result;
+            /* .Where(f =>
+               (string.IsNullOrEmpty(queryParam.Value) || )
             && (string.IsNullOrEmpty(queryParam.LogoName) || f.LogoName == queryParam.LogoName)
             && (string.IsNullOrEmpty(queryParam.Password) || f.Password == queryParam.Password)
-             ).First();
+             ).First(); */
         }
     }
 }

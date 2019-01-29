@@ -127,32 +127,32 @@ namespace BluePI
                     };
                 });
             #endregion
+            /*
+                        #region 授权
+                        services.AddAuthorization(options =>
+                        {
 
-            #region 授权
-            services.AddAuthorization(options =>
-            {
+                            //基于角色组的策略
+                            options.AddPolicy("RequireClient", policy => policy.RequireRole("Client").Build());
+                            options.AddPolicy("RequireAdmin", policy => policy.RequireRole("Admin").Build());
+                            options.AddPolicy("RequireAdminOrClient", policy => policy.RequireRole("Admin,Client").Build());
+                            //基于用户名
+                            //options.AddPolicy("RequireClaim", policy => policy.RequireUserName("张三"));                                                  
+                            //基于ClaimType
+                            //options.AddPolicy("RequireClaim", policy => policy.RequireClaim(ClaimTypes.Country,"中国"));
+                            //自定义值
+                            // options.AddPolicy("RequireClaim", policy => policy.RequireClaim("date","2017-09-02"));
+                            //}).AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>{
+                            //options.LoginPath = new PathString("/login");
+                            //options.AccessDeniedPath = new PathString("/denied");
+                            //});
 
-                //基于角色组的策略
-                options.AddPolicy("RequireClient", policy => policy.RequireRole("Client").Build());
-                options.AddPolicy("RequireAdmin", policy => policy.RequireRole("Admin").Build());
-                options.AddPolicy("RequireAdminOrClient", policy => policy.RequireRole("Admin,Client").Build()); 
-                     //基于用户名
-                     //options.AddPolicy("RequireClaim", policy => policy.RequireUserName("张三"));                                                  
-                     //基于ClaimType
-                     //options.AddPolicy("RequireClaim", policy => policy.RequireClaim(ClaimTypes.Country,"中国"));
-                     //自定义值
-                     // options.AddPolicy("RequireClaim", policy => policy.RequireClaim("date","2017-09-02"));
-                     //}).AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>{
-                     //options.LoginPath = new PathString("/login");
-                     //options.AccessDeniedPath = new PathString("/denied");
-                     //});
 
-                     
-            });
-            #endregion
-
-            #region CORS 自定义的跨域策略
-            string[] url = new string[] { Configuration.GetSection("applicationUrl").Value };
+                        });
+                        #endregion
+             */
+            #region CORS 自定义的跨域策略           
+            var url = Configuration.GetSection("applicationUrl").Value.Split(',');
             services.AddCors(c =>
             {
                 c.AddPolicy("Any", policy =>
@@ -166,7 +166,7 @@ namespace BluePI
                 c.AddPolicy("Limit", policy =>
                 {
                     policy
-                    .WithOrigins(url)
+                    .WithOrigins(url)  //读取配置文件用逗号分隔的url,指定这些url是可以访问控制器方法的
                     .WithMethods("get", "post", "put", "delete")
                     //.WithHeaders("Authorization");
                     .AllowAnyHeader();
@@ -181,9 +181,9 @@ namespace BluePI
             #region autofac依赖注入
             var builder = new ContainerBuilder();//实例化AutoFac容器  
             builder.Populate(services);
-            //注册程序集下所有类型
-            // var assembly = Assembly.GetExecutingAssembly();
-            /* var assembly = this.GetType().GetTypeInfo().Assembly;*/
+            /*注册程序集下所有类型
+            var assembly = Assembly.GetExecutingAssembly();
+            var assembly = this.GetType().GetTypeInfo().Assembly;*/
             builder.RegisterAssemblyTypes(typeof(SystemRepository).Assembly)
             .Where(t => t.Name.EndsWith("Repository"))
             .AsImplementedInterfaces();

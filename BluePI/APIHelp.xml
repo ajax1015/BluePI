@@ -43,7 +43,7 @@
             用户登录
             </summary>
             <param name="queryParam"></param>
-            <returns></returns>
+            <returns></returns>        
         </member>
         <member name="M:BluePI.Controllers.AdminController.GetUser">
             <summary>

@@ -10,24 +10,13 @@
             $("#logOn").click(function () {
                 $.ajax({
                     type: 'POST',
-                    url: "https://localhost:5001/api/Admin/LogOn",
+                    url: "../api/Admin/LogOn",
                     data: commFun.getValue(),
                     success: function (data) {
-                        alert(data.messageKey);
-                        $("#tokenStr").val(data.formatParams[0]);
+                        /*      $("#tokenStr").val(data.formatParams[0]); */
                         /*设置localStorage*/
                         localStorage.setItem('JwtBearer', data.formatParams[0]);
-                    }
-                })
-            });
-            $("#query").click(function () {
-                $.ajax({
-                    type: 'POST',
-                    url: "https://localhost:5001/api/Admin/GetUser",
-                    data: {},
-                    headers: { "Authorization": "Bearer " + localStorage.getItem('JwtBearer').trim()},
-                    success: function (data) {
-                        alert(data.nickName);
+                        location.href = "Home.html"
                     }
                 })
             });
@@ -38,7 +27,6 @@
                 return {
                     LogoName: $("#logoName").val(),
                     Password: $("#Pwd").val()
-
                 }
             }
         }
@@ -47,21 +35,19 @@
 </head>
 
 <body>
-    <fieldset style="width:300px; margin:100px auto 0;">
-        <legend>用户登录</legend>
-        <div>姓名<input type="text" id="logoName" /></div>
-        <div>密码<input type="text" id="Pwd" /></div>
-        <div>
+    <fieldset style="width:300px;  margin:100px auto 0;">
+        <legend>用户登录</legend> 
+        <div style="margin-top: 10px">姓名 <input type="text" id="logoName" /></div>
+        <div style="margin-top: 10px">密码 <input type="text" id="Pwd" /></div>
+        <div style="margin-top: 10px">
             <input type="button" id="logOn" value="登陆" />
             <input type="button" id="reg" value="注册" />
-            <input type="button" id="query" value="获取人员" />
-            <input type="button" id="logOut" value="登出" />
         </div>
 
     </fieldset>
-    <div style="width:300px; margin:100px auto 0;">
+    <!-- <div style="width:300px; margin:100px auto 0;">
         token <textarea id="tokenStr" style="width:300px; height: 100px;"></textarea>
-    </div>
+    </div> -->
 
 </body>
 

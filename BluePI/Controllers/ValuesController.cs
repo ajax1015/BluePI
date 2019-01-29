@@ -10,9 +10,8 @@ namespace BluePI.Controllers
     /// <summary>
     /// ValueController
     /// </summary>
-    [Route("api/[controller]")]
-    [ApiController]
-    [Authorize]
+    [Route("api/[controller]")]     
+    //[Authorize]
     public class ValuesController : ControllerBase
     {
         /// <summary>

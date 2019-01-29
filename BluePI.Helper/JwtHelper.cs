@@ -22,7 +22,9 @@ namespace BluePI.Helper
             {
                 new Claim(JwtRegisteredClaimNames.Jti,DateTime.Now.ToFileTime().ToString()),
                 new Claim("Id", tokenModel.Id.ToString()),
-                new Claim("LogoName", tokenModel.LogoName),               
+                new Claim("LogoName", tokenModel.LogoName),
+                new Claim("NickName",tokenModel.NickName),
+                new Claim("RoleId",tokenModel.RoleId.ToString()),
                 new Claim(JwtRegisteredClaimNames.Iat,dateTime.ToString(),ClaimValueTypes.Integer64)
             };
             //秘钥
@@ -48,6 +50,7 @@ namespace BluePI.Helper
             }
             var jwt = new JwtSecurityToken(
                 issuer: "BluePI",
+                audience:"zsg",
                 claims: claims, //声明集合
                 expires: dateTime.AddHours(exp),
                 signingCredentials: creds);
@@ -69,10 +72,12 @@ namespace BluePI.Helper
             JwtSecurityToken jwtToken = jwtHandler.ReadJwtToken(jwtStr);
             object logoName = new object();
             object id = new object();
+            object roleId = new object();
             try
             {
                 jwtToken.Payload.TryGetValue("Id", out id);
                 jwtToken.Payload.TryGetValue("LogoName", out logoName);
+                jwtToken.Payload.TryGetValue("RoleId", out roleId);
 
             }
             catch (Exception e)
@@ -82,9 +87,9 @@ namespace BluePI.Helper
             }
             var tm = new TokenModel
             {
-                Id = (int)id,
+                Id = Convert.ToInt32(id),
                 LogoName = logoName.ToString(),
-
+                RoleId = Convert.ToInt32(roleId)
             };
             return tm;
         }
@@ -105,8 +110,20 @@ namespace BluePI.Helper
         /// </summary>
         public string LogoName { get; set; }
         /// <summary>
+        /// 昵称
+        /// </summary>
+        /// <value></value>
+        public string NickName { get; set; }
+        /// <summary>
+        /// 角色
+        /// </summary>
+        /// <value></value>
+        public int RoleId { get; set; }
+        /// <summary>
         /// 令牌类型
         /// </summary>
         public string TokenType { get; set; }
+
+
     }
 }

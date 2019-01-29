@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="../Scripts/jquery-2.1.4.js"></script>
+    <script>
+        $(function () {
+            $("#query").click(function () {
+                $.ajax({
+                    type: 'POST',
+                    url: "../api/Admin/GetUser",
+                    headers: { "Authorization": "Bearer " + localStorage.getItem('JwtBearer').trim() },
+                    success: function (data) {
+                        $(".tip").html("欢迎"+data.nickName);
+                    }
+                })
+            });
+            $("#logOut").click(function () {
+                localStorage.removeItem('JwtBearer');
+                //跳转到登陆界面
+                location.href = "../Views/index.html"
+            });
+        })
+    </script>
+</head>
+
+<body> 
+    Home Page welcome 
+    <input type="button" id="query" value="获取人员" />
+    <input type="button" id="logOut" value="登出" />
+     <p class="tip"></p>
+</body>
+
+</html>
