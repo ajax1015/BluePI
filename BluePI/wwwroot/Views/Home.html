@@ -1,3 +1,4 @@
+ 
 <!DOCTYPE html>
 <html>
 
@@ -13,7 +14,7 @@
                     url: "../api/Admin/GetUser",
                     headers: { "Authorization": "Bearer " + localStorage.getItem('JwtBearer').trim() },
                     success: function (data) {
-                        $(".tip").html("欢迎"+data.nickName);
+                        $(".tip").html(data.nickName);
                     }
                 })
             });
@@ -27,10 +28,11 @@
 </head>
 
 <body> 
-    Home Page welcome 
+    
+    Home Page Welcome     <p class="tip"></p>
     <input type="button" id="query" value="获取人员" />
     <input type="button" id="logOut" value="登出" />
-     <p class="tip"></p>
+ 
 </body>
 
 </html>

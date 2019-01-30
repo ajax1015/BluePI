@@ -70,15 +70,14 @@ namespace BluePI.Helper
         {
             var jwtHandler = new JwtSecurityTokenHandler();
             JwtSecurityToken jwtToken = jwtHandler.ReadJwtToken(jwtStr);
-            object logoName = new object();
-            object id = new object();
-            object roleId = new object();
+            object logoName = new object(),id = new object(), roleId = new object(),nickName=new object();
+          
             try
             {
                 jwtToken.Payload.TryGetValue("Id", out id);
                 jwtToken.Payload.TryGetValue("LogoName", out logoName);
                 jwtToken.Payload.TryGetValue("RoleId", out roleId);
-
+                jwtToken.Payload.TryGetValue("NickName", out nickName); 
             }
             catch (Exception e)
             {

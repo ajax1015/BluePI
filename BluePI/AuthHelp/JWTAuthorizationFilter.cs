@@ -37,18 +37,18 @@ namespace BluePI.AuthHelp
             var tokenHeader = httpContext.Request.Headers["Authorization"];
             tokenHeader = tokenHeader.ToString().Substring("Bearer ".Length).Trim();
 
-            TokenModel tm = JwtHelper.SerializeJWT(tokenHeader);
-
-            //BaseBLL.TokenModel = tm;//将tokenModel存入baseBll
-
+            TokenModel tm = JwtHelper.SerializeJWT(tokenHeader);  
+                      
             //授权
-            var claimList = new List<Claim>();
-            var claim = new Claim(ClaimTypes.Role.ToString(), tm.Id.ToString());
-            claimList.Add(claim);
+            var claimList = new List<Claim>(){
+                 new Claim(ClaimTypes.NameIdentifier,tm.Id.ToString()),
+                 new Claim(ClaimTypes.Role, tm.RoleId.ToString()),
+                 new Claim(ClaimTypes.GivenName,tm.NickName),
+                 new Claim(ClaimTypes.Name,tm.LogoName)
+            };            
             var identity = new ClaimsIdentity(claimList);
             var principal = new ClaimsPrincipal(identity);
             httpContext.User = principal;
-
             return _next(httpContext);
         }
     }

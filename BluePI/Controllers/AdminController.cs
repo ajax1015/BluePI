@@ -31,7 +31,8 @@ namespace BluePI.Controllers
         public AdminController(IUserService _userService)
         {
             userService = _userService;
-        }
+        } 
+
         /// <summary>
         /// 用户注册
         /// </summary>
