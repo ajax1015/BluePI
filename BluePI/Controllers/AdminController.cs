@@ -71,7 +71,8 @@ namespace BluePI.Controllers
                     LogoName = userInfo.LogoName,
                     Id = userInfo.Id,
                     NickName = userInfo.NickName,
-                    RoleId = userInfo.RoleId
+                    RoleId = userInfo.RoleId,
+                    TokenType="Web"
 
                 });
                 status.FormatParams = tokenStr.Split(',');
@@ -86,7 +87,7 @@ namespace BluePI.Controllers
         /// <returns></returns>
         [HttpPost]
         [Route("GetUser")]
-        //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+      //  [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public JsonResult GetUser()
         {
             // HttpContext.User.Identity.IsAuthenticated

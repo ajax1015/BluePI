@@ -234,5 +234,13 @@
             <param name="assemblyName"></param>
             <returns></returns>
         </member>
+        <member name="M:BluePI.Unit.RuntimeHelper.GetImplementType(System.String,System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="typeName"></param>
+            <param name="baseInterfaceType"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>

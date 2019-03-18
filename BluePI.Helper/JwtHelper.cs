@@ -25,6 +25,7 @@ namespace BluePI.Helper
                 new Claim("LogoName", tokenModel.LogoName),
                 new Claim("NickName",tokenModel.NickName),
                 new Claim("RoleId",tokenModel.RoleId.ToString()),
+                new Claim("TokenType",tokenModel.TokenType),
                 new Claim(JwtRegisteredClaimNames.Iat,dateTime.ToString(),ClaimValueTypes.Integer64)
             };
             //秘钥
@@ -50,7 +51,7 @@ namespace BluePI.Helper
             }
             var jwt = new JwtSecurityToken(
                 issuer: "BluePI",
-                audience:"zsg",
+                audience: "zsg",
                 claims: claims, //声明集合
                 expires: dateTime.AddHours(exp),
                 signingCredentials: creds);
@@ -70,14 +71,15 @@ namespace BluePI.Helper
         {
             var jwtHandler = new JwtSecurityTokenHandler();
             JwtSecurityToken jwtToken = jwtHandler.ReadJwtToken(jwtStr);
-            object logoName = new object(),id = new object(), roleId = new object(),nickName=new object();
-          
+            object logoName = new object(), id = new object(), roleId = new object(), nickName = new object(), tokenType = new object();
+
             try
             {
                 jwtToken.Payload.TryGetValue("Id", out id);
                 jwtToken.Payload.TryGetValue("LogoName", out logoName);
                 jwtToken.Payload.TryGetValue("RoleId", out roleId);
-                jwtToken.Payload.TryGetValue("NickName", out nickName); 
+                jwtToken.Payload.TryGetValue("NickName", out nickName);
+                jwtToken.Payload.TryGetValue("TokenType", out tokenType);
             }
             catch (Exception e)
             {
@@ -88,7 +90,9 @@ namespace BluePI.Helper
             {
                 Id = Convert.ToInt32(id),
                 LogoName = logoName.ToString(),
-                RoleId = Convert.ToInt32(roleId)
+                RoleId = Convert.ToInt32(roleId),
+                TokenType = tokenType.ToString(),
+                NickName = nickName.ToString()
             };
             return tm;
         }

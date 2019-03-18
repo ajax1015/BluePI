@@ -33,7 +33,7 @@ namespace BluePI.Unit
                 }
                 catch (Exception ex)
                 {
-                    
+
                 }
             }
             return list;
@@ -81,7 +81,12 @@ namespace BluePI.Unit
             }
             return list;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="typeName"></param>
+        /// <param name="baseInterfaceType"></param>
+        /// <returns></returns>
         public static Type GetImplementType(string typeName, Type baseInterfaceType)
         {
             return GetAllTypes().FirstOrDefault(t =>
