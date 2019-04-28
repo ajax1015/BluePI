@@ -87,7 +87,7 @@ namespace BluePI.Controllers
         /// <returns></returns>
         [HttpPost]
         [Route("GetUser")]
-      //  [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+       // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)] 加上之后需要传入正确的token，否则会返回未授权的错误 
         public JsonResult GetUser()
         {
             // HttpContext.User.Identity.IsAuthenticated
